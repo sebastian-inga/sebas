@@ -14,4 +14,7 @@ estado: "activo",
 version:"1.0.0",
 message: "Sistema sebas funcionado correctamente"
 };
+export function sumar(a, b) {
+  return a + b;
+}
 }
