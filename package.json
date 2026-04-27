@@ -1,10 +1,10 @@
 {
-"name": "flowsebas",
-"version": "1.0.0",
-"type": "module",
-"description": "primera aplicación sebas flow",
-"scripts": {
-"start": "node src/app.js",
-"test": "node test/app.test.js"
+ "name": "flowMartinez",
+ "version": "1.0.0",
+ "type": "module",
+ "description": "primera aplicacion juanMartinezFlow",
+ "scripts": {
+ "start": "node src/app.js",
+ "test": "node test/app.test.js"
 }
 }

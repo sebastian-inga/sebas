@@ -1,5 +1,5 @@
 node modules/
 *.log
-.DS Store
+.ds store
 dist/
 .env
