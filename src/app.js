@@ -1,5 +1,5 @@
 export function saludar(nombre) {
-  return "Hola " + nombre + ", bienvenido a aplicacion de Martinez";
+  return "Hola " + nombre + ", bienvenido a aplicacion de sebastian";
 }
 
 export function estadoSistema() {
@@ -15,11 +15,11 @@ export function sumar(a, b) {
   return "la suma de los numeros " + a + " + " + b + " es igual a " + resultado;
 }
 
-export function healtCheack () {
-  return null;
+export function healtCheack() {
+  return {
+    status: "ok",
+    timestamp: new Date().toISOString(),
+    servicio: "Streamflow API",
+    version: "1.0.0"
+  };
 }
-
-// status:'ok',
-//  timestape: new Date().toISOString(),
-//  servicio: 'Streamflow API',
-//  version: '1.0.0'

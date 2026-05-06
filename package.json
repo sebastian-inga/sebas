@@ -1,10 +1,15 @@
 {
- "name": "flowMartinez",
- "version": "1.0.0",
- "type": "module",
- "description": "primera aplicacion juanMartinezFlow",
- "scripts": {
- "start": "node src/app.js",
- "test": "node test/app.test.js"
-}
+  "name": "flowsebastian",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "vite": "^5.4.10",
+    "vitest": "^4.1.5"
+  }
 }
