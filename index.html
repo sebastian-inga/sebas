@@ -1,22 +1,180 @@
+## Archivo: `index.html`
+
+Reemplázalo completo por este para que se vea mucho más moderno, limpio y profesional:
+
+```html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flow Sebastian</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fa;
+    color: #333;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 38px;
+    color: #1e3a8a;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #666;
+    font-size: 18px;
+}
+
+.card {
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.card h2 {
+    color: #111827;
+    margin-bottom: 15px;
+}
+
+.status {
+    background: #e0f2fe;
+    color: #0369a1;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+select,
+input,
+button {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    font-size: 16px;
+}
+
+button {
+    background: #2563eb;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+#resultado {
+    margin-top: 20px;
+    padding: 20px;
+    background: #f9fafb;
+    border: 1px solid #dbeafe;
+    border-radius: 10px;
+    min-height: 80px;
+    white-space: pre-wrap;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #777;
+    font-size: 14px;
+}
+</style>
 </head>
+
 <body>
+
+<div class="container">
+
     <header>
-    <h1>que es lo que somosssssssss</h1>
-    <span>cargando....</span>
+        <h1>Flow Sebastian</h1>
+        <p>Sistema de ejercicios JavaScript + verificación de despliegue</p>
     </header>
-    <main>
-        <div class="car">
-        <h2> programando con git </h2>
-<div class = "status" id = "status" > verificando despliegue</div>
+
+    <div class="card">
+        <h2>Estado del Sistema</h2>
+
+        <div class="status" id="status">
+            Verificando despliegue...
+        </div>
+
+        <button onclick="verificarSistema()">
+            Verificar Sistema
+        </button>
+    </div>
+
+    <div class="card">
+        <h2>Ejercicios JavaScript</h2>
+
+        <label for="selectEjercicio">
+            Selecciona un ejercicio:
+        </label>
+
+        <select id="selectEjercicio">
+            <option value="">-- Selecciona un ejercicio --</option>
+            <option value="5">5 - Calcular factorial</option>
+            <option value="6">6 - Contador numérico</option>
+            <option value="7">7 - Suma de números pares</option>
+            <option value="8">8 - Mostrar números impares</option>
+        </select>
+
+        <div id="inputsContainer"></div>
+
+        <button id="botonEjecutar">
+            Ejecutar ejercicio
+        </button>
+
+        <div id="resultado">
+            Aquí aparecerán los resultados...
+        </div>
+    </div>
+
+    <footer>
+        Proyecto desarrollado por Sebastian Martinez
+    </footer>
+
 </div>
-<button onclick="verificarSistema()">verificar  Sistema</button>
-    </main>
-    <script src="app.js" ></script>
+
+<script type="module" src="./src/public/app.js"></script>
+
 </body>
 </html>
+
