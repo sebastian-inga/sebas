@@ -1,7 +1,7 @@
-import { calcularFactorial } from "../../ejercicio5.js";
-import { procesarNumero } from "../../ejercicio6.js";
-import { cargarSuma, mostrarSuma } from "../../ejercicio7.js";
-import { procesarLimite } from "../../ejercicio8.js";
+import { calcularFactorial } from "./ejercicio5.js";
+import { procesarNumero } from "./ejercicio6.js";
+import { cargarSuma, mostrarSuma } from "./ejercicio7.js";
+import { procesarLimite } from "./ejercicio8.js";
 
 const selectEjercicio = document.getElementById("selectEjercicio");
 const botonEjecutar = document.getElementById("botonEjecutar");
@@ -63,3 +63,12 @@ botonEjecutar.addEventListener("click", () => {
         procesarLimite();
     }
 });
+
+window.verificarSistema = function () {
+    const statusDiv = document.getElementById("status");
+
+    statusDiv.textContent =
+        "Sistema funcionando correctamente - Deploy verificado";
+
+    statusDiv.style.color = "green";
+};
