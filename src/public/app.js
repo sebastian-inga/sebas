@@ -6,8 +6,10 @@ import { procesarLimite } from "./public/ejercicio8.js";
 document.addEventListener("DOMContentLoaded", () => {
     const selectEjercicio = document.getElementById("selectEjercicio");
     const botonEjecutar = document.getElementById("botonEjecutar");
+    const botonVerificar = document.getElementById("botonVerificar");
     const inputsContainer = document.getElementById("inputsContainer");
     const resultado = document.getElementById("resultado");
+    const statusDiv = document.getElementById("status");
 
     function limpiarInputs() {
         inputsContainer.innerHTML = "";
@@ -48,29 +50,15 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        if (opcion === "5") {
-            calcularFactorial();
-        }
-
-        if (opcion === "6") {
-            procesarNumero();
-        }
-
-        if (opcion === "7") {
-            mostrarSuma();
-        }
-
-        if (opcion === "8") {
-            procesarLimite();
-        }
+        if (opcion === "5") calcularFactorial();
+        if (opcion === "6") procesarNumero();
+        if (opcion === "7") mostrarSuma();
+        if (opcion === "8") procesarLimite();
     });
 
-    window.verificarSistema = function () {
-        const statusDiv = document.getElementById("status");
-
+    botonVerificar.addEventListener("click", () => {
         statusDiv.textContent =
             "Sistema funcionando correctamente - Deploy verificado";
-
         statusDiv.style.color = "green";
-    };
+    });
 });
