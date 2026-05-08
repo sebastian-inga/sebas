@@ -1,4 +1,4 @@
-import { calcularFactorial } from "./ejercicio5.js";
+import { calcularFactorial } from './public/ejercicio5.js';
 import { procesarNumero } from "./ejercicio6.js";
 import { cargarSuma, mostrarSuma } from "./ejercicio7.js";
 import { procesarLimite } from "./ejercicio8.js";
