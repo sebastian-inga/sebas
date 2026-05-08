@@ -1,7 +1,7 @@
-import { calcularFactorial } from './public/ejercicio5.js';
-import { procesarNumero } from "./ejercicio6.js";
-import { cargarSuma, mostrarSuma } from "./ejercicio7.js";
-import { procesarLimite } from "./ejercicio8.js";
+import { calcularFactorial } from "./public/ejercicio5.js";
+import { procesarNumero } from "./public/ejercicio6.js";
+import { cargarSuma, mostrarSuma } from "./public/ejercicio7.js";
+import { procesarLimite } from "./public/ejercicio8.js";
 
 const selectEjercicio = document.getElementById("selectEjercicio");
 const botonEjecutar = document.getElementById("botonEjecutar");
