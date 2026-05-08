@@ -1,25 +1,64 @@
-export function saludar(nombre) {
-  return "Hola " + nombre + ", bienvenido a aplicacion de sebastian";
-}
+import { calcularFactorial } from "./public/ejercicio5.js";
+import { procesarNumero } from "./public/ejercicio6.js";
+import { cargarSuma, mostrarSuma } from "./public/ejercicio7.js";
+import { procesarLimite } from "./public/ejercicio8.js";
 
-export function estadoSistema() {
-  return {
-    estado: "activo",
-    version: "1.0.0",
-    mensaje: "Sistema Martinez funcionando correctamente",
-  };
-}
+document.addEventListener("DOMContentLoaded", () => {
+    const selectEjercicio = document.getElementById("selectEjercicio");
+    const botonEjecutar = document.getElementById("botonEjecutar");
+    const botonVerificar = document.getElementById("botonVerificar");
+    const inputsContainer = document.getElementById("inputsContainer");
+    const resultado = document.getElementById("resultado");
+    const statusDiv = document.getElementById("status");
 
-export function sumar(a, b) {
-  const resultado = a + b;
-  return "la suma de los numeros " + a + " + " + b + " es igual a " + resultado;
-}
+    function limpiarInputs() {
+        inputsContainer.innerHTML = "";
+        resultado.innerHTML = "Aquí aparecerán los resultados...";
+    }
 
-export function healtCheack() {
-  return {
-    status: "ok",
-    timestamp: new Date().toISOString(),
-    servicio: "Streamflow API",
-    version: "1.0.0"
-  };
-}
+    selectEjercicio.addEventListener("change", () => {
+        limpiarInputs();
+
+        const opcion = selectEjercicio.value;
+
+        if (opcion === "6") {
+            const input = document.createElement("input");
+            input.id = "numeroInput";
+            input.type = "number";
+            input.placeholder = "Ingresa un número";
+            inputsContainer.appendChild(input);
+        }
+
+        if (opcion === "7") {
+            cargarSuma();
+        }
+
+        if (opcion === "8") {
+            const input = document.createElement("input");
+            input.id = "limiteInput";
+            input.type = "number";
+            input.placeholder = "Ingresa un límite";
+            inputsContainer.appendChild(input);
+        }
+    });
+
+    botonEjecutar.addEventListener("click", () => {
+        const opcion = selectEjercicio.value;
+
+        if (!opcion) {
+            resultado.innerHTML = "Por favor selecciona un ejercicio.";
+            return;
+        }
+
+        if (opcion === "5") calcularFactorial();
+        if (opcion === "6") procesarNumero();
+        if (opcion === "7") mostrarSuma();
+        if (opcion === "8") procesarLimite();
+    });
+
+    botonVerificar.addEventListener("click", () => {
+        statusDiv.textContent =
+            "Sistema funcionando correctamente - Deploy verificado";
+        statusDiv.style.color = "green";
+    });
+});
